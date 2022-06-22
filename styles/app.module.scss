@@ -1,0 +1,31 @@
+@import "./color.variables.scss";
+
+.app {
+    height: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside main";
+}
+.aside {
+    grid-area: aside;
+    background: $main-background-color;
+    border-right: 1px solid rgb(99, 96, 96);
+    color: $main-font-color;
+}
+.header {
+    grid-area: header;
+    background: $main-background-color;
+    color: $main-font-color;
+}
+.main {
+    grid-area: main;
+    background: $main-background-color;
+    overflow: auto;
+    color: $main-font-color;
+    white-space: nowrap;
+}
