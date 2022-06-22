@@ -1,5 +1,5 @@
 # Game store
 
-# Next js, Typescript, SASS
+# Next js, Typescript, Redux, SASS
 
 # RAWG API
