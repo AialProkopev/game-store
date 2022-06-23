@@ -2,7 +2,6 @@
 
 .app {
     height: 100%;
-    border-radius: 50px;
     overflow: hidden;
     display: grid;
     grid-template-rows: 100px 1fr;
@@ -14,8 +13,37 @@
 .aside {
     grid-area: aside;
     background: $main-background-color;
-    border-right: 1px solid rgb(99, 96, 96);
+    border-right: 1.5px solid rgb(196, 196, 196);
     color: $main-font-color;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 0;
+
+    .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        font-size: 20px;
+        font-weight: 500;
+        color: black;
+    }
+    .aside__item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-right: 3px solid rgba(255, 255, 255, 0);
+    }
+    .aside__item_active {
+        border-right: 3px solid $active-font-color;
+    }
+    .link {
+        font-size: 20px;
+    }
+    .link_active {
+        color: $active-font-color;
+    }
 }
 .header {
     grid-area: header;
