@@ -11,6 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@styled-icons/ionicons-solid": "^10.34.0",
+    "dotenv": "^16.0.1",
     "next": "12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",

@@ -1,7 +1,10 @@
 import type { NextPage } from "next"
 import Head from "next/head"
+import { DotenvConfigOptions } from "dotenv"
 
 const Cart: NextPage = () => {
+  console.log(process.env.API_KEY)
+
   return (
     <div>
       <Head>
