@@ -1,0 +1,41 @@
+@import '../../styles/color.variables.scss';
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box2 {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arr {
+    min-height: 400px;
+    margin-block: 10px;
+    display: grid;
+    grid-template-columns: 1fr max(25%, 125px);
+    grid-template-rows: repeat(3, 1fr) min-content;
+    gap: clamp(15px, 2.5vw, 25px);
+    flex: 1 1;
+}
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $active-font-color;
+    &:first-child {
+            grid-row: 1 / 5;
+        }
+}

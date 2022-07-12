@@ -1,0 +1,23 @@
+@import "./color.variables.scss";
+@import './font.variables.scss';
+// flexbox
+@mixin flexGapDirection($gap:0, $direction:row) {
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+@mixin flexCenterDirection($dir:row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $dir;
+}
+// text
+@mixin text($fontSize: 18px, $fontWeight: 500){
+    font-family: $main-font;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    font-style: normal;
+    line-height: 1;
+    color: $main-font-color;
+}

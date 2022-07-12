@@ -1,0 +1,17 @@
+@import 'src/styles/color.variables.scss';
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid rgba(255, 255, 255, 0);
+}
+.wrapper_active {
+    border-right: 1px solid $active-font-color; 
+}
+.link {
+    font-size: 20px;
+}
+.link_active {
+    color: $active-font-color;
+}

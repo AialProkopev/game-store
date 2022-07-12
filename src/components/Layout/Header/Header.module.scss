@@ -1,0 +1,15 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.header {
+    grid-area: header;
+    background: $main-background-color;
+    color: $main-font-color;
+}
+.wrapper {
+    @include text(24px, 600);
+    padding: 4px 32px;
+    span {
+        color: $active-font-color;
+    }
+}

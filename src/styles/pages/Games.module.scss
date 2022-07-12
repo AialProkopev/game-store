@@ -1,0 +1,42 @@
+@import '../mixins.scss';
+@import '../color.variables.scss';
+
+.main {
+    min-height: 1000px;
+    max-width: 100%;
+    padding: 8px 16px;
+}
+.genres {
+    button {
+        @include text;
+        &:hover {
+            color: $active-font-color;
+        }
+    }
+    .activeGenre {
+        color: $active-font-color;
+    }
+}
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+.showmore {
+    width: 100%;
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+    button {
+        padding: 8px 16px;
+        @include text;
+        background:none;
+        outline: none;
+        &:hover {
+            outline: 2px solid $active-font-color;
+            border-radius: 4px;
+        }
+    }
+}

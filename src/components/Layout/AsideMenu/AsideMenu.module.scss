@@ -1,0 +1,10 @@
+@import "src/styles/color.variables.scss";
+@import 'src/styles/mixins.scss';
+
+.aside {
+    @include flexGapDirection(40px, column);
+    grid-area: aside;
+    padding: 16px 0;
+    background: $main-background-color;
+    color: $main-font-color;
+}

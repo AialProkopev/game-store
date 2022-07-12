@@ -1,0 +1,55 @@
+@import 'src/styles/color.variables.scss';
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+    @include flexGapDirection(0,column);
+    position: relative;
+    // width: 460px;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.blackblur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black -15%, transparent 90%);
+    opacity: 0.8;
+}
+.menu {
+    @include text(18px,500);
+    @include flexGapDirection(6px, column);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: $main-font-color;
+    padding: 10px;
+}
+.hoverWrapper {
+    @include flexCenterDirection(row);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(#000, 0.6);
+    .btn {
+        @include text;
+        width: 140px;
+        height: 40px;
+        position: absolute;
+        z-index: 100;
+        border-radius: 10px;
+        border: 2px solid $active-font-color;
+        background-color: transparent;
+        color: $active-font-color;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}

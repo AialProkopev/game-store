@@ -1,0 +1,21 @@
+@import "src/styles/color.variables.scss";
+@import 'src/styles/mixins.scss';
+
+.layout {
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 32px 1fr;
+    grid-template-columns: 48px 1fr;
+    grid-template-areas:
+        "aside header"
+        "aside main";
+}
+.main {
+    grid-area: main;
+    background: $main-background-color;
+    overflow: auto;
+    color: $main-font-color;
+    white-space: nowrap;
+}
+

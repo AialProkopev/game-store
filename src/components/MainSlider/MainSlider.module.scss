@@ -1,0 +1,61 @@
+@import 'src/styles/color.variables.scss';
+@import 'src/styles/font.variables.scss';
+@import 'src/styles/mixins.scss';
+
+.slider {
+    min-height: 400px;
+    margin-block: 10px;
+    display: grid;
+    grid-template-columns: 1fr max(25%, 125px);
+    grid-template-rows: repeat(3, 1fr) min-content;
+    gap: clamp(15px, 2.5vw, 25px);
+    flex: 1 1;
+}
+.item {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    background-color: $main-background-color;
+    font-size: 18px;
+    overflow: hidden;
+    border-radius: 15px;
+    color: $active-font-color;
+    cursor: pointer;
+    &:first-child {
+        grid-row: 1 / 5;
+    }
+}
+.bigItem {
+    @extend .item;
+    width: 100%;
+    height: 650px;
+}
+.title {
+    @include text(18px,600);
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+}
+.bigTitle {
+    @extend .title;
+    font-size: 40px;
+}
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.75) 15%,
+            rgba(0, 0, 0, 0) 40%);
+}
+.progressBar {
+    position: absolute;
+    height: 0.6%;
+    background-color: $active-font-color;
+    border-radius: 5px;
+    bottom: 0;
+}
