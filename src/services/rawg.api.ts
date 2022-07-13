@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { getRandomInt } from 'src/utils/getRandomInt/randomInt';
 // import { Game } from 'types/Game.types';
 
 const api = {
@@ -28,8 +29,29 @@ export const gamesApi = createApi({
         return `api/genres?key=${api.key}`
       }
     }),
+    getRandom4Games: build.query({
+      query: ()=> {
+        const randomInt = getRandomInt(100)
+        return `api/games?key=${api.key}&page=${randomInt}&page_size=4`
+      }
+    }),
+    getBestGames: build.query<any, {pageSize: number}>({
+      query: (arg)=> {
+        const {pageSize} = arg
+        const randomInt = getRandomInt(50)
+        return `api/games?key=${api.key}&page=${randomInt}&page_size=${pageSize}&ordering=-rating`
+      }
+    }),
   })
 })
 
 
-export const {useGetGameListQuery, useLazyGetGameListQuery ,useGetGameQuery, useLazyGetGameQuery, useLazyGetGenresQuery} = gamesApi
+export const {
+  useGetGameListQuery, 
+  useLazyGetGameListQuery,
+  useGetGameQuery, 
+  useLazyGetGameQuery, 
+  useLazyGetGenresQuery, 
+  useGetRandom4GamesQuery, 
+  useGetBestGamesQuery
+} = gamesApi

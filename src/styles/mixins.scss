@@ -1,6 +1,6 @@
 @import "./color.variables.scss";
 @import './font.variables.scss';
-// flexbox
+
 @mixin flexGapDirection($gap:0, $direction:row) {
     display: flex;
     flex-direction: $direction;
@@ -12,7 +12,6 @@
     align-items: center;
     flex-direction: $dir;
 }
-// text
 @mixin text($fontSize: 18px, $fontWeight: 500){
     font-family: $main-font;
     font-size: $fontSize;

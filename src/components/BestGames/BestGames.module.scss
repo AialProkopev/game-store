@@ -1,0 +1,19 @@
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    h2 {
+        @include text(28px);
+    }
+}
+.games {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 32px;
+}

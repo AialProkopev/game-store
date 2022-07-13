@@ -29,7 +29,6 @@ export const GameCard = ({ data }: { data: Game }) => {
   return (
     <motion.div
       animate="enter"
-      // className="fallback"
       exit="exit"
       initial="initial"
       variants={variants}
