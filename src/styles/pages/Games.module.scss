@@ -7,14 +7,21 @@
     padding: 8px 16px;
 }
 .genres {
+    width: 100%;
+    min-height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     button {
-        @include text;
+        @include text(20px);
+        color: #f2edeb6b;
         &:hover {
-            color: $active-font-color;
+            color: $main-font-color;
         }
     }
     .activeGenre {
-        color: $active-font-color;
+        color: $main-font-color;
     }
 }
 .grid {
@@ -22,7 +29,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    gap: 16px;
 }
 .showmore {
     width: 100%;

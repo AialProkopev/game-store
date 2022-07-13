@@ -32,7 +32,7 @@ export const gamesApi = createApi({
     getRandom4Games: build.query({
       query: ()=> {
         const randomInt = getRandomInt(100)
-        return `api/games?key=${api.key}&page=${randomInt}&page_size=4`
+        return `api/games?key=6404ffdb94d2456c93ec1ad3d7807f90&page=${randomInt}&page_size=4`
       }
     }),
     getBestGames: build.query<any, {pageSize: number}>({
@@ -40,6 +40,12 @@ export const gamesApi = createApi({
         const {pageSize} = arg
         const randomInt = getRandomInt(50)
         return `api/games?key=${api.key}&page=${randomInt}&page_size=${pageSize}&ordering=-rating`
+      }
+    }),
+    getScreenshots: build.query<any, {id: number}>({
+      query: (arg)=> {
+        const {id} = arg
+        return `api/games/${id}/screenshots?key=${api.key}`
       }
     }),
   })
@@ -53,5 +59,10 @@ export const {
   useLazyGetGameQuery, 
   useLazyGetGenresQuery, 
   useGetRandom4GamesQuery, 
-  useGetBestGamesQuery
+  useGetBestGamesQuery,
+  useGetScreenshotsQuery
 } = gamesApi
+
+export const {
+  getRandom4Games
+} = gamesApi.endpoints

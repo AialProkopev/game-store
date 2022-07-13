@@ -1,0 +1,17 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.carousel {
+    display: flex;
+    gap: 16px;
+}
+.imageWrapper {
+    overflow: hidden;
+    width: 300px;
+    height: 240px;
+}
+.imageWrapper_sel {
+    @extend .imageWrapper;
+    border: 5px solid red ;
+}

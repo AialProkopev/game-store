@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { Game } from "src/types/Game.types"
+import { GameType } from "src/types/Game.type"
 import styles from "./GameCard.module.scss"
 import Image from "next/image"
 import { motion } from "framer-motion"
 
-export const GameCard = ({ data }: { data: Game }) => {
+export const GameCard = ({ data }: { data: GameType }) => {
   const [opacity, setOpacity] = useState<number>(0)
   const [menuVisible, setMenuVisible] = useState(false)
 

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import styles from "./MainSlider.module.scss"
-import { Game } from "src/types/Game.types"
+import { GameType } from "src/types/Game.type"
 import Image from "next/image"
 
 export const MainSlider = ({
   data,
   duration,
 }: {
-  data: Game[]
+  data: GameType[]
   duration: number
 }) => {
-  const [games, setGames] = useState<Game[]>(data)
+  const [games, setGames] = useState<GameType[]>(data)
 
   useEffect(() => {
     setGames(data)

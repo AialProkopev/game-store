@@ -4,7 +4,7 @@
 .aside {
     @include flexGapDirection(40px, column);
     grid-area: aside;
-    padding: 16px 0;
+    padding: 42px 0;
     background: $main-background-color;
     color: $main-font-color;
 }

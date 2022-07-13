@@ -1,9 +1,9 @@
 import Image from "next/image"
 import React, { FC } from "react"
-import { Game } from "src/types/Game.types"
+import { GameType } from "src/types/Game.type"
 import styles from "./GameItem.module.scss"
 
-export const GameItem: FC<{ game: Game }> = ({ game }) => {
+export const GameItem: FC<{ game: GameType }> = ({ game }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.image}>

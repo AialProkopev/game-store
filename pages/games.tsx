@@ -6,10 +6,10 @@ import {
   useLazyGetGenresQuery,
 } from "src/services/rawg.api"
 import styles from "src/styles/pages/Games.module.scss"
-import { Game } from "src/types/Game.types"
+import { GameType } from "src/types/Game.type"
 
 const Games: NextPage = () => {
-  const [games, setGames] = useState<Game[]>([])
+  const [games, setGames] = useState<GameType[]>([])
   const [currentPage, setCurrentPage] = useState(1)
   const [activeGenre, setActiveGenre] = useState<string>("")
   const { data, isLoading, error } = useGetGameListQuery({
@@ -68,10 +68,36 @@ const Games: NextPage = () => {
           >
             Indie
           </button>
+          <button
+            className={activeGenre === "simulation" ? styles.activeGenre : ""}
+            onClick={() => {
+              handleChangeGenre("simulation")
+            }}
+          >
+            Simulation
+          </button>
+          <button
+            className={activeGenre === "arcade" ? styles.activeGenre : ""}
+            onClick={() => {
+              handleChangeGenre("arcade")
+            }}
+          >
+            Arcade
+          </button>
+          <button
+            className={activeGenre === "sports" ? styles.activeGenre : ""}
+            onClick={() => {
+              handleChangeGenre("sports")
+            }}
+          >
+            Sports
+          </button>
         </div>
         <div className={styles.grid} id="grid">
           {games &&
-            games.map((item: Game) => <GameCard key={item.id} data={item} />)}
+            games.map((item: GameType) => (
+              <GameCard key={item.id} data={item} />
+            ))}
         </div>
         <div className={styles.showmore}>
           <button

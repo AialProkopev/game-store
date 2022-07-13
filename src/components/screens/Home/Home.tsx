@@ -1,18 +1,9 @@
 import React from "react"
-import Head from "next/head"
-import {
-  useGetGameListQuery,
-  useGetRandom4GamesQuery,
-  useLazyGetGameQuery,
-} from "src/services/rawg.api"
+import { useGetRandom4GamesQuery } from "src/services/rawg.api"
 import styles from "./Home.module.scss"
-import { useCallback, useEffect, useMemo, useState } from "react"
-import { Game } from "src/types/Game.types"
-import { GameCard } from "src/components/GameCard/GameCard"
-import { Loading } from "src/components/Loading"
+import { useEffect, useState } from "react"
+import { GameType } from "src/types/Game.type"
 import { MainSlider } from "src/components/MainSlider/MainSlider"
-import { GameVideo } from "src/components/GameVideo/GameVideo"
-import { motion } from "framer-motion"
 import { cycleArray } from "src/utils/cycleArray/cycleArray"
 import { BestGames } from "src/components/BestGames/BestGames"
 
@@ -20,7 +11,7 @@ const duration = 12
 
 export const Home = () => {
   const { data, isLoading, error } = useGetRandom4GamesQuery({})
-  const [games, setGames] = useState<Game[] | null>(null)
+  const [games, setGames] = useState<GameType[] | null>(null)
 
   useEffect(() => {
     if (data && !isLoading) {
@@ -31,7 +22,7 @@ export const Home = () => {
   useEffect(() => {
     let interval: NodeJS.Timer
     interval = setInterval(() => {
-      setGames((games) => cycleArray(games as Game[]) as Game[])
+      setGames((games) => cycleArray(games as GameType[]) as GameType[])
     }, duration * 1000)
     return () => clearInterval(interval)
   }, [games])

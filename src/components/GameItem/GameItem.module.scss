@@ -1,16 +1,21 @@
 @import 'src/styles/mixins.scss';
 
 .wrapper {
-    width: 200px;
-    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
     .image {
         position: relative;
-        width: 100%;
-        height: 100%;
+        width: 280px;
+        // width: 100%;
+        height: 140px;
+        border-radius: 15px;
+        overflow: hidden;
     }
     h3 {
         @include text;
-        max-width: 100%;
+        width: 280px;
         white-space: normal;
     }
 }

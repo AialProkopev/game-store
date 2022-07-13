@@ -1,4 +1,4 @@
-interface Game {
+interface GameType {
   id: number,
   slug: string,
   name: string,
@@ -37,4 +37,4 @@ interface Game {
   }[],
 }
 
-export type { Game };
+export type { GameType };
