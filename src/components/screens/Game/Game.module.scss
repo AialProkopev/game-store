@@ -1,0 +1,72 @@
+@import 'src/styles/mixins.scss';
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 36px 0;
+    display: flex;
+    justify-content: center;
+    gap: 64px;
+}
+.description {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+}
+.title {
+    @include text(36px, 600);
+    width: 100%;
+    white-space: normal;
+    display: flex;
+    justify-content: center;
+}
+.banner {
+    width: 100%;
+    min-height: 160px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.info {
+    @include text(16px);
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    white-space: normal;
+    &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: rgb(73, 73, 73)
+        }
+    &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: rgb(73, 73, 73)
+    }
+}
+.info__title {
+    @include text(24px,600);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: $active-font-color;
+}
+.button {
+    width: 100%;
+    display: flex;
+    .button__add {
+        width: 100%;
+        @include text(18px);
+        border: 1px solid $main-font-color;
+        border-radius: 16px;
+    }
+    .button__fav {
+        color: $main-font-color;
+    }
+}
+
