@@ -20,7 +20,7 @@ export const gamesApi = createApi({
         else return `api/games?key=${api.key}&page=${page}&page_size=${pageSize}`
       } 
     }),
-    getGame: build.query<DataType<GameType>, {id: number}>({
+    getGame: build.query<GameType, {id: number}>({
       query: (arg)=> {
         const {id} = arg
         return `api/games/${id}?key=${api.key}`
