@@ -1,6 +1,7 @@
 @import 'src/styles/color.variables.scss';
 
 .grid {
+    grid-area: left-top;
     width: 1000px;
     height: 600px;
     display: grid;

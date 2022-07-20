@@ -4,6 +4,8 @@
 
 # RAWG API
 
+Genres:
+
 0: Object { id: 4, name: "Action", slug: "action", … }
 ​​​
 1: Object { id: 51, name: "Indie", slug: "indie", … }

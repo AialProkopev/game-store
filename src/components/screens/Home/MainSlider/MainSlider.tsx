@@ -30,13 +30,15 @@ export const MainSlider = ({
             layout: { type: "spring", stiffness: 30 },
           }}
         >
-          <Image
-            src={item.background_image}
-            layout="fill"
-            objectFit="cover"
-            alt="bck"
-            priority
-          />
+          {item.background_image ? (
+            <Image
+              src={item.background_image}
+              layout="fill"
+              objectFit="cover"
+              alt="bck"
+              priority
+            />
+          ) : null}
           <div className={styles.overlay}>
             <AnimatePresence>
               <motion.h1

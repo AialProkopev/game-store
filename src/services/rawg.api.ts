@@ -1,6 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { getRandomInt } from 'src/utils/getRandomInt/randomInt';
-// import { Game } from 'types/Game.types';
+import {DataType} from 'src/types/Data.type'
+import { GameType } from 'src/types/Game.type';
+import { ScreenshotType } from "src/types/Screenshot.type"
 
 const api = {
   url: 'https://api.rawg.io/',
@@ -11,14 +13,14 @@ export const gamesApi = createApi({
   reducerPath: 'api/games',
   baseQuery: fetchBaseQuery({ baseUrl: api.url}),
   endpoints: build => ({
-    getGameList: build.query<any, {page: number, pageSize: number, genre: string}>({
+    getGameList: build.query<DataType<GameType>, {page: number, pageSize: number, genre: string}>({
       query: (arg) => {
         const {page, pageSize, genre} = arg
         if (genre) return `api/games?key=${api.key}&page=${page}&page_size=${pageSize}&genres=${genre}`
         else return `api/games?key=${api.key}&page=${page}&page_size=${pageSize}`
       } 
     }),
-    getGame: build.query<any, {id: number}>({
+    getGame: build.query<DataType<GameType>, {id: number}>({
       query: (arg)=> {
         const {id} = arg
         return `api/games/${id}?key=${api.key}`
@@ -35,14 +37,14 @@ export const gamesApi = createApi({
         return `api/games?key=6404ffdb94d2456c93ec1ad3d7807f90&page=${randomInt}&page_size=4`
       }
     }),
-    getBestGames: build.query<any, {pageSize: number}>({
+    getBestGames: build.query<DataType<GameType>, {pageSize: number}>({
       query: (arg)=> {
         const {pageSize} = arg
         const randomInt = getRandomInt(50)
         return `api/games?key=${api.key}&page=${randomInt}&page_size=${pageSize}&ordering=-rating`
       }
     }),
-    getScreenshots: build.query<any, {id: number}>({
+    getScreenshots: build.query<DataType<ScreenshotType>, {id: number}>({
       query: (arg)=> {
         const {id} = arg
         return `api/games/${id}/screenshots?key=${api.key}`

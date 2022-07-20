@@ -3,9 +3,9 @@ import { useGetRandom4GamesQuery } from "src/services/rawg.api"
 import styles from "./Home.module.scss"
 import { useEffect, useState } from "react"
 import { GameType } from "src/types/Game.type"
-import { MainSlider } from "src/components/MainSlider/MainSlider"
+import { MainSlider } from "./MainSlider/MainSlider"
 import { cycleArray } from "src/utils/cycleArray/cycleArray"
-import { BestGames } from "src/components/BestGames/BestGames"
+import { BestGames } from "./BestGames/BestGames"
 
 const duration = 12
 
@@ -18,6 +18,7 @@ export const Home = () => {
       setGames(data.results)
     }
   }, [data, isLoading])
+  console.log(data)
 
   useEffect(() => {
     let interval: NodeJS.Timer

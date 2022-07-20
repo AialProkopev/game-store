@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image"
 import React, { FC, useEffect, useState } from "react"
 import { useGetScreenshotsQuery } from "src/services/rawg.api"
 import { ScreenshotType } from "src/types/Screenshot.type"
@@ -31,11 +30,6 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
 
   useEffect(() => {
     animateCarousel()
-    // if (index >= screenShots.length) {
-    //   setIndex(0)
-    // } else if (index < 0) {
-    //   setIndex(screenShots.length - 1)
-    // }
   }, [index])
 
   const handleChangeIndex = (ch: string, index: number) => {
@@ -84,16 +78,6 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
             >
               {screenShots.map((item) => (
                 <div key={item.id} className={styles.bigImageWrapper}>
-                  {/* <Image
-                    layout="fill"
-                    objectFit="cover"
-                    // height={1600}
-                    // width={700}
-                    src={item.image}
-                    alt="screenshot"
-                    quality="4"
-                    priority
-                  /> */}
                   <img
                     src={item.image}
                     alt="image"
@@ -115,14 +99,6 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
                     : `${styles.imageWrapper}`
                 }
               >
-                {/* <Image
-                  layout="fill"
-                  objectFit="cover"
-                  src={item.image}
-                  alt="screenshot"
-                  quality="1"
-                  priority
-                /> */}
                 <img src={item.image} alt="image" width="100%" height="100%" />
               </div>
             ))}

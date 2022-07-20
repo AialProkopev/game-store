@@ -10,9 +10,11 @@ interface GameType {
   background_image: string,
   developers: {
     name: string,
+    id: number
   }[],
   publishers: {
     name: string,
+    id: number
   }[],
   parent_platforms: {
     platform: {

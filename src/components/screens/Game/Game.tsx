@@ -1,12 +1,11 @@
-import Image from "next/image"
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
 import { Carousel } from "src/components/Carousel/Carousel"
 import { useGetGameQuery } from "src/services/rawg.api"
 import { GameType } from "src/types/Game.type"
 import styles from "./Game.module.scss"
-// import { Heart } from "@styled-icons/ionicons-solid/"
-import { Heart } from "@styled-icons/bootstrap/Heart"
+import { GameDetails } from "./GameDetails/GameDetails"
+import { GameMainInfo } from "./GameMainInfo/GameMainInfo"
 
 export const Game = () => {
   const {
@@ -28,28 +27,15 @@ export const Game = () => {
     game && (
       <div className={styles.wrapper}>
         <Carousel id={game.id} />
-
-        <main className={styles.description}>
-          <h1 className={styles.title}>{game.name}</h1>
-          <div className={styles.banner}>
-            <Image
-              src={game.background_image}
-              layout="fill"
-              objectFit="cover"
-              alt="game-background-image"
-            />
-          </div>
-          <div className={styles.info}>
-            <h3 className={styles.info__title}>About</h3>
-            <div className={styles.info__content}>{game.description_raw}</div>
-          </div>
-          <div className={styles.button}>
-            <button className={styles.button__add}>Add to cart</button>
-            <button className={styles.button__fav}>
-              <Heart height={32} />
-            </button>
-          </div>
-        </main>
+        <GameDetails
+          developers={game.developers}
+          publishers={game.publishers}
+        />
+        <GameMainInfo
+          name={game.name}
+          description_raw={game.description_raw}
+          background_image={game.background_image}
+        />
       </div>
     )
   )
