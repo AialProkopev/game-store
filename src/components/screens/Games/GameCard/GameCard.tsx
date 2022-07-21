@@ -6,43 +6,9 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 
 export const GameCard = ({ data }: { data: GameType }) => {
-  const [opacity, setOpacity] = useState<number>(0)
-  const [menuVisible, setMenuVisible] = useState(false)
-
-  const variants = {
-    initial: {
-      opacity: opacity,
-    },
-    enter: {
-      opacity: 1,
-      transition: { duration: 0.6 },
-    },
-    exit: {
-      opacity: 0,
-      transition: { duration: 0.6 },
-    },
-  }
-
-  useEffect(() => {
-    setOpacity(0)
-  }, [])
-
   return (
     <Link href={data ? `game/${data.id}` : ""}>
-      <motion.div
-        animate="enter"
-        exit="exit"
-        initial="initial"
-        variants={variants}
-        whileHover={{ scale: 1.02 }}
-        className={styles.wrapper}
-        onHoverStart={() => {
-          setMenuVisible(true)
-        }}
-        onHoverEnd={() => {
-          setMenuVisible(false)
-        }}
-      >
+      <motion.div whileHover={{ scale: 1.02 }} className={styles.wrapper}>
         <div className={styles.image}>
           <Image
             src={data.background_image}

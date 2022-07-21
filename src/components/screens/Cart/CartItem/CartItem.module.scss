@@ -1,0 +1,39 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    background-color: $manatee;
+    border-radius: 16px;
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .title {
+            @include text(24px);
+        }
+        .imageWrapper {
+            position: relative;
+            width: 320px;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    }
+    .controls {
+        @include text(18px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .remove {
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}

@@ -6,15 +6,18 @@ import styles from "./GameItem.module.scss"
 export const GameItem: FC<{ game: GameType }> = ({ game }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.image}>
-        <Image
-          src={game.background_image}
-          layout="fill"
-          alt="game-image"
-          objectFit="cover"
-        />
+      <div className={styles.front}>
+        <div className={styles.image}>
+          <Image
+            src={game.background_image}
+            layout="fill"
+            alt="game-image"
+            objectFit="cover"
+          />
+        </div>
+        <h3>{game.name}</h3>
       </div>
-      <h3>{game.name}</h3>
+      <div className={styles.back}>Back</div>
     </div>
   )
 }

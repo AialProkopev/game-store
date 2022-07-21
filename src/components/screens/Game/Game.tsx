@@ -44,6 +44,7 @@ export const Game = () => {
             description_raw={game.description_raw}
             background_image={game.background_image}
             price={game.price}
+            game={game}
           />
         </div>
       </Transition>

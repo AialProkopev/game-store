@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { FC, useEffect, useState } from "react"
 import { useGetScreenshotsQuery } from "src/services/rawg.api"
 import { ScreenshotType } from "src/types/Screenshot.type"
@@ -85,6 +85,7 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
                     alt="image"
                     layout="fill"
                     objectFit="cover"
+                    priority
                   />
                 </div>
               ))}

@@ -2,11 +2,17 @@
 
 # [x] - Search
 
-# [] - Slow Game Screen
+# [] - Image Loading Optimization
 
-# [] - Add to cart (redux)
+# [] - Pagination
 
-# [] - Add to fav (redux)
+# [] - Add & remove to cart (redux)
+
+# [] - Add to whistlist (redux)
+
+# [] - Cart Screen
+
+# [] - Whistlist Screen
 
 # [] - "src is null Error"
 

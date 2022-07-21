@@ -37,6 +37,7 @@ export const MainSlider = ({
               layout="fill"
               objectFit="cover"
               alt="background-image"
+              priority
             />
           ) : null}
           <Link href={`/game/${item.id}`}>
