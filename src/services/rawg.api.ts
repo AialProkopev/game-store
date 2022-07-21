@@ -50,6 +50,12 @@ export const gamesApi = createApi({
         return `api/games/${id}/screenshots?key=${api.key}`
       }
     }),
+    getGamesBySearch: build.query<DataType<GameType>, {search: string}>({
+      query: (arg)=> {
+        const {search} = arg
+        return `api/games?key=${api.key}&search=${search}`
+      }
+    }),
   })
 })
 
@@ -62,7 +68,8 @@ export const {
   useLazyGetGenresQuery, 
   useGetRandom4GamesQuery, 
   useGetBestGamesQuery,
-  useGetScreenshotsQuery
+  useGetScreenshotsQuery,
+  useGetGamesBySearchQuery
 } = gamesApi
 
 export const {

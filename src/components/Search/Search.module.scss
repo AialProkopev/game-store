@@ -1,0 +1,28 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+    .search {
+        width: 300px;
+        height: 32px;
+        background-color: $dark-color;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        border-radius: 10px;
+        padding: 0 4px;
+        span {
+            color: $main-font-color;
+            cursor: pointer;
+        }
+        input {
+                @include text(14px);
+                width: 100%;
+                border: none;
+                color: $main-font-color;
+                background: none;
+            }
+    }
+}

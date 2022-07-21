@@ -1,4 +1,4 @@
-# [] - Game Screen
+# [x] - Game Screen
 
 # [] - Search
 
@@ -6,7 +6,7 @@
 
 # [] - Add to fav (redux)
 
-# [x] - "src is null Error"
+# [] - "src is null Error"
 
 # [x] - Add DataType for rawg.api service
 
