@@ -1,6 +1,8 @@
 # [x] - Game Screen
 
-# [] - Search
+# [x] - Search
+
+# [] - Slow Game Screen
 
 # [] - Add to cart (redux)
 

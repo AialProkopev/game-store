@@ -4,7 +4,7 @@ $grid-gap : 36px;
 
 .grid {
     grid-area: left-top;
-    max-width: 1100px;
+    width: clamp(900px, 1000px, 1100px);
     height: 100%;
     display: grid;
     gap: $grid-gap;

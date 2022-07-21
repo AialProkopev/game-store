@@ -18,8 +18,12 @@ export const SearchList: FC<SearchListPropsType> = ({ value }) => {
 
   return (
     <div className={styles.wrapper}>
-      {list ? (
-        <motion.ul>
+      {list && (
+        <motion.ul
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 300, opacity: 1 }}
+          transition={{ type: "spring", duration: 0.3, delay: 0.3 }}
+        >
           {list.length === 0
             ? "no results"
             : list.map((item) => (
@@ -28,7 +32,7 @@ export const SearchList: FC<SearchListPropsType> = ({ value }) => {
                 </Link>
               ))}
         </motion.ul>
-      ) : null}
+      )}
     </div>
   )
 }

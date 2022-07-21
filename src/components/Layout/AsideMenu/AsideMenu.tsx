@@ -15,7 +15,7 @@ export const AsideMenu = () => {
       <MenuLink activeLink={"/games"}>
         <Games height={logoSize} />
       </MenuLink>
-      <MenuLink activeLink={"/favourite"}>
+      <MenuLink activeLink={"/whishlist"}>
         <Heart height={logoSize} />
       </MenuLink>
       <MenuLink activeLink={"/cart"}>

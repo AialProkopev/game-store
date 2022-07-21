@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import styles from "./MainSlider.module.scss"
 import { GameType } from "src/types/Game.type"
 import Image from "next/image"
+import Link from "next/link"
 
 export const MainSlider = ({
   data,
@@ -35,39 +36,40 @@ export const MainSlider = ({
               src={item.background_image}
               layout="fill"
               objectFit="cover"
-              alt="bck"
-              priority
+              alt="background-image"
             />
           ) : null}
-          <div className={styles.overlay}>
-            <AnimatePresence>
-              <motion.h1
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                }}
-                className={
-                  index == 0 ? `${styles.bigTitle}` : `${styles.title}`
-                }
-              >
-                {item.name}
-              </motion.h1>
-              {index == 0 && (
-                <motion.div
-                  key={`progress-${item.id}`}
-                  className={styles.progressBar}
-                  initial={{ width: 0 }}
-                  animate={{
-                    width: "100%",
-                    transition: { duration: duration },
+          <Link href={`/game/${item.id}`}>
+            <div className={styles.overlay}>
+              <AnimatePresence>
+                <motion.h1
+                  initial={{
+                    opacity: 0,
                   }}
-                  exit={{ opacity: 0 }}
-                />
-              )}
-            </AnimatePresence>
-          </div>
+                  animate={{
+                    opacity: 1,
+                  }}
+                  className={
+                    index == 0 ? `${styles.bigTitle}` : `${styles.title}`
+                  }
+                >
+                  {item.name}
+                </motion.h1>
+                {index == 0 && (
+                  <motion.div
+                    key={`progress-${item.id}`}
+                    className={styles.progressBar}
+                    initial={{ width: 0 }}
+                    animate={{
+                      width: "100%",
+                      transition: { duration: duration },
+                    }}
+                    exit={{ opacity: 0 }}
+                  />
+                )}
+              </AnimatePresence>
+            </div>
+          </Link>
         </motion.div>
       ))}
     </div>

@@ -3,14 +3,14 @@
 //   reactStrictMode: true,
 //   images: {
 //     domains: ["media.rawg.io"],
-//     formats: ["image/jpeg"],
+//     formats: ["image/webp"],
 //   },
 // }
 
 module.exports = {
   images: {
     domains: ["media.rawg.io"],
-    // formats: ["image/jpeg"],
+    formats: ["image/webp"],
   },
 }
 

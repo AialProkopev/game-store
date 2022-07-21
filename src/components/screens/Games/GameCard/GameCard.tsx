@@ -49,6 +49,8 @@ export const GameCard = ({ data }: { data: GameType }) => {
             layout="fill"
             alt="game-image"
             objectFit="cover"
+            quality={50}
+            priority
           />
           <div className={styles.blackblur}></div>
         </div>

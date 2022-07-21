@@ -5,6 +5,7 @@ import { ScreenshotType } from "src/types/Screenshot.type"
 import styles from "./Carousel.module.scss"
 import { motion, useAnimation } from "framer-motion"
 import { ArrowBack, ArrowForward } from "@styled-icons/material-outlined"
+import Image from "next/image"
 
 interface CarouselPropsType {
   id: number
@@ -48,6 +49,7 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
   const animateCarousel = () => {
     carouselControls.start({ x: `${-index * 100}%` })
   }
+  console.log(screenShots)
 
   return (
     <>
@@ -78,11 +80,11 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
             >
               {screenShots.map((item) => (
                 <div key={item.id} className={styles.bigImageWrapper}>
-                  <img
+                  <Image
                     src={item.image}
                     alt="image"
-                    width="100%"
-                    height="100%"
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </div>
               ))}
@@ -99,7 +101,12 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
                     : `${styles.imageWrapper}`
                 }
               >
-                <img src={item.image} alt="image" width="100%" height="100%" />
+                <Image
+                  src={item.image}
+                  alt="image"
+                  layout="fill"
+                  objectFit="cover"
+                />
               </div>
             ))}
           </div>
