@@ -1,0 +1,18 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.platforms {
+    @include text(20px);
+    display: flex;
+    align-items: center;
+
+    span {
+        display: inline-block;
+        width: 120px;
+        color: $second-font-color;
+    }
+    .platforms__list {
+        display: flex;
+        gap: 16px;
+    }
+}

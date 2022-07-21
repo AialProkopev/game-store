@@ -1,9 +1,10 @@
 import styles from "./Games.module.scss"
-import { GameCard } from "src/components/GameCard/GameCard"
+import { GameCard } from "./GameCard/GameCard"
 import React, { useEffect, useState } from "react"
 import { useGetGameListQuery } from "src/services/rawg.api"
 import { GameType } from "src/types/Game.type"
 import { Genres } from "./Genres/Genres"
+import Transition from "src/components/Transition/Transition"
 
 export const Games = () => {
   const [games, setGames] = useState<GameType[]>([])
@@ -25,7 +26,7 @@ export const Games = () => {
   }
 
   return (
-    <div>
+    <Transition direction="left">
       <main className={styles.main}>
         <Genres
           handleChangeGenre={handleChangeGenre}
@@ -47,6 +48,6 @@ export const Games = () => {
           </button>
         </div>
       </main>
-    </div>
+    </Transition>
   )
 }

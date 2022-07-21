@@ -1,16 +1,17 @@
 @import 'src/styles/color.variables.scss';
 
+$grid-gap : 36px;
+
 .grid {
     grid-area: left-top;
-    width: 1000px;
-    height: 600px;
+    max-width: 1100px;
+    height: 100%;
     display: grid;
-    grid-template-rows: 90% 10%;
+    gap: $grid-gap;
+    grid-template-rows: calc(90% - $grid-gap) 10%;
     grid-template-areas: 
     "main"
     "belt";
-    // flex: 1 1;
-    gap: 32px;
     position: relative;
 }
 .belt {

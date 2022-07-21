@@ -5,11 +5,13 @@
     height: 100%;
     padding: 36px 36px;
     display: grid;
-    // justify-content: center;
     grid-template-areas: 
     "left-top right"
     "left-bottom right";
-    gap: 0;
+    grid-template-rows: 700px  1fr;
+    gap: 24px;
+    column-gap: 48px;
+    justify-content: flex-start;
 }
 
 

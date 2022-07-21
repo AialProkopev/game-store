@@ -3,21 +3,18 @@
 
 .genres {
     width: 100%;
-    min-height: 56px;
+    min-height: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-
     button {
         @include text(20px);
-        color: #f2edeb6b;
-
+        color: $second-font-color;
         &:hover {
             color: $main-font-color;
         }
     }
-
     .activeGenre {
         color: $main-font-color;
     }

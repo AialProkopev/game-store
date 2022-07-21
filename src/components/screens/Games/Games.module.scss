@@ -4,17 +4,15 @@
 .main {
     min-height: 1000px;
     max-width: 100%;
-    padding: 8px 16px;
+    padding: 0 32px;
 }
-
-
 
 .grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 16px;
+    gap: 24px;
 }
 
 .showmore {

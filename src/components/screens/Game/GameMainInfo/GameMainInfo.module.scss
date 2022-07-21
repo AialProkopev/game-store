@@ -1,4 +1,5 @@
 @import 'src/styles/mixins.scss';
+
 .description {
     grid-area: right;
     width: 400px;
@@ -7,13 +8,7 @@
     gap: 16px;
 
 }
-.title {
-    @include text(36px, 600);
-    width: 100%;
-    white-space: normal;
-    display: flex;
-    justify-content: center;
-}
+
 .banner {
     width: 100%;
     min-height: 160px;
@@ -47,6 +42,13 @@
     display: flex;
     justify-content: center;
     color: $active-font-color;
+}
+.info__content {
+    overflow-y: auto;
+    max-height: 400px;
+}
+.price {
+    @include text;
 }
 .button {
     width: 100%;

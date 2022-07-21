@@ -5,7 +5,7 @@
     height: 100%;
     overflow: hidden;
     display: grid;
-    grid-template-rows: 32px 1fr;
+    grid-template-rows: 48px 1fr;
     grid-template-columns: 48px 1fr;
     grid-template-areas:
         "aside header"
@@ -15,6 +15,7 @@
     grid-area: main;
     background: $main-background-color;
     overflow: auto;
+    overflow-x: hidden;
     color: $main-font-color;
     white-space: nowrap;
 }

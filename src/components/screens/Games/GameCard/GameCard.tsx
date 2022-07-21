@@ -52,18 +52,6 @@ export const GameCard = ({ data }: { data: GameType }) => {
           />
           <div className={styles.blackblur}></div>
         </div>
-        {menuVisible ? (
-          <div className={styles.hoverWrapper}>
-            <button
-              className={styles.btn}
-              onClick={() => {
-                console.log("clicked")
-              }}
-            >
-              <span>Add to cart</span>
-            </button>
-          </div>
-        ) : null}
         <div className={styles.menu}>
           <div className={styles.lower_menu}>{data.name}</div>
         </div>

@@ -2,11 +2,13 @@
 @import 'src/styles/color.variables.scss';
 
 .header {
-    @include text(24px, 600);
+    @include text(26px, 600);
     grid-area: header;
     background: $main-background-color;
     color: $main-font-color;
     padding: 4px 32px;
+    display: flex;
+    align-items: center;
     span {
         color: $active-font-color;
     }

@@ -1,6 +1,45 @@
-.footer {
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.wrapper {
     grid-area: left-bottom;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 16px;
+}
+.details {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+}
+.details__item {
+    @include flexGapDirection(4px, column);
+    @include text(20px);
+    color: $main-font-color;
+    div {
+        span:first-child {
+            display: inline-block;
+            width: 120px;
+            color: $second-font-color;
+        }
+        .span:not(:last-child):after {
+            content: ', ';
+        }
+
+    }
+}
+.title {
+    @include text(32px, 600);
+    white-space: normal;
+}
+.release {
+    @include text(20px);
+    display: flex;
+    align-items: center;
+    span:first-child 
+    {
+        display: inline-block;
+        width: 90px;
+        color: $second-font-color;
+    }
 }

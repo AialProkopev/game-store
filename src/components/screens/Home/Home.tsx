@@ -6,6 +6,7 @@ import { GameType } from "src/types/Game.type"
 import { MainSlider } from "./MainSlider/MainSlider"
 import { cycleArray } from "src/utils/cycleArray/cycleArray"
 import { BestGames } from "./BestGames/BestGames"
+import Transition from "src/components/Transition/Transition"
 
 const duration = 12
 
@@ -29,17 +30,19 @@ export const Home = () => {
   }, [games])
 
   return (
-    <div className={styles.container}>
-      {games ? (
-        <>
-          <main className={styles.main}>
-            <MainSlider data={games} duration={duration} />
-          </main>
-          <footer className={styles.footer}>
-            <BestGames />
-          </footer>
-        </>
-      ) : null}
-    </div>
+    <Transition direction="left">
+      <div className={styles.container}>
+        {games ? (
+          <>
+            <main className={styles.main}>
+              <MainSlider data={games} duration={duration} />
+            </main>
+            <footer className={styles.footer}>
+              <BestGames />
+            </footer>
+          </>
+        ) : null}
+      </div>
+    </Transition>
   )
 }
