@@ -1,3 +1,9 @@
 import { addToCart, removeItemFromCart } from "./reducers/Cart.slice";
+import { addToWhishlist, removeItemFromWhishlist } from "./reducers/Whishlist.slice";
 
-export {addToCart, removeItemFromCart}
+export {
+    addToCart, 
+    removeItemFromCart,
+    addToWhishlist, 
+    removeItemFromWhishlist 
+}

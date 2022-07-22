@@ -2,9 +2,10 @@
 @import 'src/styles/mixins.scss';
 
 .aside {
-    @include flexGapDirection(40px, column);
+    @include flexGapDirection(32px, row);
     grid-area: aside;
-    padding: 42px 0;
-    background: $main-background-color;
+    padding: 4px;
+    border-radius: 10px;
+    background: $dark-color;
     color: $main-font-color;
 }

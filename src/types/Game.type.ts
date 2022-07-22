@@ -8,6 +8,8 @@ interface GameType {
   website: string,
   released: string,
   background_image: string,
+  metacritic: number,
+  rating: number,
   developers: {
     name: string,
     id: number

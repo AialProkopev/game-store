@@ -6,8 +6,8 @@
     display: flex;
     justify-content: space-between;
     padding: 18px;
-    background-color: $manatee;
     border-radius: 16px;
+    border: 1px solid $manatee;
     .main {
         display: flex;
         flex-direction: column;

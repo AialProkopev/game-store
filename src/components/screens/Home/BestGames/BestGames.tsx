@@ -17,7 +17,7 @@ export const BestGames: FC = () => {
 
   return (
     <div className={styles.wrapper}>
-      <h2>Best Games of All Time</h2>
+      <h2>Random Best Games</h2>
       <div className={styles.games}>
         {bestGames &&
           bestGames.map((item: GameType) => (

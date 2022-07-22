@@ -1,0 +1,10 @@
+@import 'src/styles/mixins.scss';
+@import 'src/styles/color.variables.scss';
+
+.title {
+    min-width: 300px;
+    cursor:default;
+    span {
+            color: $active-font-color;
+        }
+}

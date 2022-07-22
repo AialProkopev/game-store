@@ -11,7 +11,7 @@ import Transition from "src/components/Transition/Transition"
 const duration = 12
 
 export const Home = () => {
-  const { data, isLoading, error } = useGetRandom4GamesQuery({})
+  const { data, isLoading } = useGetRandom4GamesQuery({})
   const [games, setGames] = useState<GameType[] | null>(null)
 
   useEffect(() => {
@@ -19,7 +19,6 @@ export const Home = () => {
       setGames(data.results)
     }
   }, [data, isLoading])
-  console.log(data)
 
   useEffect(() => {
     let interval: NodeJS.Timer

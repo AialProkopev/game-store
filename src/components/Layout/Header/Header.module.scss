@@ -6,12 +6,16 @@
     grid-area: header;
     background: $main-background-color;
     color: $main-font-color;
-    padding: 4px 32px;
+    padding: 4px 128px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 170px;
-    span {
-        color: $active-font-color;
+    .left {
+        display: flex;
+        align-items: center;
+        // width: 100%;
+        gap: 64px;
+        height: 100%;
     }
 }

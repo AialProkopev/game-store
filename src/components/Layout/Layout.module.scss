@@ -6,10 +6,9 @@
     overflow: hidden;
     display: grid;
     grid-template-rows: 48px 1fr;
-    grid-template-columns: 48px 1fr;
     grid-template-areas:
-        "aside header"
-        "aside main";
+        "header"
+        "main";
 }
 .main {
     grid-area: main;

@@ -49,6 +49,8 @@
 }
 .price {
     @include text;
+    display: flex;
+    justify-content: flex-end;
 }
 .button {
     width: 100%;

@@ -6,16 +6,33 @@ import { CartItem } from "./CartItem/CartItem"
 
 export const Cart = () => {
   const cart = useAppSelector((state: RootState) => state.cartReducer.cart)
+
+  const totalPrice = () => {
+    return (
+      Math.round(
+        cart.reduce((prev, current) => prev + current.price, 0) * 100
+      ) / 100
+    )
+  }
   return (
     <div className={styles.wrapper}>
       {cart.length > 0 ? (
-        <div className={styles.cart}>
-          {cart.map((item) => (
-            <CartItem key={item.id} game={item} />
-          ))}
-        </div>
+        <>
+          <div className={styles.cart}>
+            {cart.map((item) => (
+              <CartItem key={item.id} game={item} />
+            ))}
+          </div>
+          <div className={styles.payment}>
+            <div className={styles.payment__header}>
+              <h4>Summary</h4>
+              <div>Total : {totalPrice()} $</div>
+            </div>
+            <button>Check out</button>
+          </div>
+        </>
       ) : (
-        "Empty cart"
+        <div className={styles.empty}>Your cart is empty</div>
       )}
     </div>
   )

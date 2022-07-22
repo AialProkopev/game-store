@@ -1,14 +1,14 @@
 import React from "react"
-import { Diamond, Cart, Heart } from "@styled-icons/ionicons-solid/"
+import { Diamond, Heart } from "@styled-icons/ionicons-solid/"
 import { Games } from "@styled-icons/fluentui-system-filled/Games"
 import { MenuLink } from "../MenuLink/MenuLink"
-import styles from "./AsideMenu.module.scss"
+import styles from "./HeaderMenu.module.scss"
 
-const logoSize = 32
+const logoSize = 26
 
-export const AsideMenu = () => {
+export const HeaderMenu = () => {
   return (
-    <aside className={styles.aside}>
+    <nav className={styles.aside}>
       <MenuLink activeLink={"/"}>
         <Diamond height={logoSize} />
       </MenuLink>
@@ -18,9 +18,6 @@ export const AsideMenu = () => {
       <MenuLink activeLink={"/whishlist"}>
         <Heart height={logoSize} />
       </MenuLink>
-      <MenuLink activeLink={"/cart"}>
-        <Cart height={logoSize} />
-      </MenuLink>
-    </aside>
+    </nav>
   )
 }

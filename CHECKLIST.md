@@ -2,25 +2,31 @@
 
 # [x] - Search
 
+# [x] - Add & remove to cart (redux)
+
+# [x] - Add to whistlist (redux)
+
+# [x] - Cart Screen
+
+# [x] - Add DataType for rawg.api service
+
+# [x] - Add font
+
+# [] - Whistlist Screen
+
+# [] - Home page > best games
+
+# [] - "src is null Error"
+
 # [] - Image Loading Optimization
 
 # [] - Pagination
 
-# [] - Add & remove to cart (redux)
-
-# [] - Add to whistlist (redux)
-
-# [] - Cart Screen
-
-# [] - Whistlist Screen
-
-# [] - "src is null Error"
-
-# [x] - Add DataType for rawg.api service
-
 # [] - optimization (useCallback, useMemo)
 
 # [] - adaptive
+
+# [] - getStaticProps (Next js)
 
 Genres:
 
