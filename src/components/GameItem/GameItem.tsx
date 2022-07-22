@@ -9,6 +9,7 @@ export const GameItem: FC<{ game: GameType }> = ({ game }) => {
     <Link href={`/game/${game.id}`}>
       <div className={styles.wrapper}>
         <div className={styles.front}>
+          <h3>{game.name}</h3>
           <div className={styles.image}>
             <Image
               src={game.background_image}
@@ -17,7 +18,6 @@ export const GameItem: FC<{ game: GameType }> = ({ game }) => {
               objectFit="cover"
             />
           </div>
-          <h3>{game.name}</h3>
         </div>
         <div className={styles.back}>
           <div className={styles.box}>

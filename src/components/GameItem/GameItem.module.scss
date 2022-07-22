@@ -35,8 +35,11 @@
         }
         h3 {
             @include text;
+            // color: $second-font-color;
             white-space: normal;
-            margin-top: 4px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: center;
         }
     }
     .back {
