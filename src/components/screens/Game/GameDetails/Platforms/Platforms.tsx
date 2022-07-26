@@ -8,12 +8,12 @@ interface PlatformsPropsType {
   platforms: Array<{ platform: { name: string; id: number } }>
 }
 
-const logoSize = 32
+const logoSize = 20
 
 export const Platforms: FC<PlatformsPropsType> = ({ platforms }) => {
   return (
     <div className={styles.platforms}>
-      <span>Platforms</span>
+      <h6>Platforms</h6>
       <div className={styles.platforms__list}>
         {platforms.map((item) => {
           if (item.platform.name === "PC")

@@ -49,7 +49,6 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
   const animateCarousel = () => {
     carouselControls.start({ x: `${-index * 100}%` })
   }
-  console.log(screenShots)
 
   return (
     <>

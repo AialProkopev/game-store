@@ -49,7 +49,7 @@ export const Games = () => {
   const onScroll = useCallback((event: any) => {
     const { innerHeight } = window
     const { scrollHeight, scrollTop } = event.target.documentElement
-    if (scrollHeight - (scrollTop + innerHeight) < 150) setFetching(true)
+    if (scrollHeight - (scrollTop + innerHeight) < 120) setFetching(true)
   }, [])
 
   console.log(currentPage)

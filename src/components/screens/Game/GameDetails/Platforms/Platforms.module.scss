@@ -4,10 +4,10 @@
 .platforms {
     @include text(20px);
     display: flex;
-    align-items: center;
-
-    span {
-        display: inline-block;
+    flex-direction: column;
+    gap: 4px;
+    h6 {
+        // display: inline-block;
         width: 120px;
         color: $second-font-color;
     }

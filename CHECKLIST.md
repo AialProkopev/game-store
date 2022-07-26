@@ -18,7 +18,7 @@
 
 # [x] - Pagination
 
-# [] - finish carousel
+# [x] - finish carousel
 
 # [] - Image Loading Optimization
 

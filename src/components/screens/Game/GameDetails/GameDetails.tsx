@@ -24,7 +24,7 @@ export const GameDetails: FC<GameDetailsProps> = ({
         <div className={styles.details}>
           <div className={styles.details__item}>
             <div>
-              <span>Creators</span>
+              <h6>Creators</h6>
               {developers.map((item, index) => (
                 <span key={`${item.name}_${index}`} className={styles.span}>
                   {item.name}
@@ -32,7 +32,7 @@ export const GameDetails: FC<GameDetailsProps> = ({
               ))}
             </div>
             <div>
-              <span>Publishers</span>
+              <h6>Publishers</h6>
               {publishers.map((item, index) => (
                 <span key={`${item.name}_${index}`} className={styles.span}>
                   {item.name}
@@ -41,7 +41,7 @@ export const GameDetails: FC<GameDetailsProps> = ({
             </div>
           </div>
           <div className={styles.release}>
-            <span>Release</span>
+            <h6>Release</h6>
             <span>{release}</span>
           </div>
           <Platforms platforms={platforms} />

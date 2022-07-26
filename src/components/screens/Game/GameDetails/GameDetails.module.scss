@@ -14,12 +14,14 @@
 }
 .details__item {
     @include flexGapDirection(4px, column);
-    @include text(20px);
+    @include text(14px);
+    max-width: 600px;
+    overflow: hidden;
     color: $main-font-color;
     div {
-        span:first-child {
-            display: inline-block;
+        h6 {
             width: 120px;
+            font-size: 20px;
             color: $second-font-color;
         }
         .span:not(:last-child):after {
@@ -35,11 +37,13 @@
 .release {
     @include text(20px);
     display: flex;
-    align-items: center;
-    span:first-child 
-    {
+    flex-direction: column;
+    gap: 4px;
+    h6 {
         display: inline-block;
         width: 90px;
+        font-size: 20px;
         color: $second-font-color;
     }
+    
 }
