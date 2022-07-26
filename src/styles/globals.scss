@@ -4,8 +4,6 @@
 
 * {
   box-sizing: border-box;
-  
-  
 }
 html,
 body {
@@ -30,10 +28,11 @@ button {
   border: none;
 }
 html,body, #__next {
-  height: 100%;
-  overflow: hidden;
+  // height: 100%;
+  // overflow: hidden;
   background: #ffff;
 }
+
 
 // Custom Scroll bar
 * {

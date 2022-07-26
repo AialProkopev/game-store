@@ -6,7 +6,6 @@ import { CartItem } from "./CartItem/CartItem"
 
 export const Cart = () => {
   const cart = useAppSelector((state: RootState) => state.cartReducer.cart)
-
   const totalPrice = () => {
     return (
       Math.round(
@@ -14,6 +13,7 @@ export const Cart = () => {
       ) / 100
     )
   }
+
   return (
     <div className={styles.wrapper}>
       {cart.length > 0 ? (

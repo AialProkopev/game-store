@@ -11,12 +11,16 @@ export const GameItem: FC<{ game: GameType }> = ({ game }) => {
         <div className={styles.front}>
           <h3>{game.name}</h3>
           <div className={styles.image}>
-            <Image
-              src={game.background_image}
-              layout="fill"
-              alt="game-image"
-              objectFit="cover"
-            />
+            {game.background_image ? (
+              <Image
+                src={game.background_image}
+                layout="fill"
+                alt={game.name}
+                objectFit="cover"
+              />
+            ) : (
+              "no image"
+            )}
           </div>
         </div>
         <div className={styles.back}>

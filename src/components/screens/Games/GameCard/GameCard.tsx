@@ -13,7 +13,7 @@ export const GameCard = ({ data }: { data: GameType }) => {
           <Image
             src={data.background_image}
             layout="fill"
-            alt="game-image"
+            alt={data.name}
             objectFit="cover"
             quality={50}
             priority

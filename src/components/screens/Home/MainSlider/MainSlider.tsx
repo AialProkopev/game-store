@@ -36,7 +36,7 @@ export const MainSlider = ({
               src={item.background_image}
               layout="fill"
               objectFit="cover"
-              alt="background-image"
+              alt={item.name}
               priority
             />
           ) : null}

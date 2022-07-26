@@ -15,9 +15,6 @@ export const HeaderMenu = () => {
       <MenuLink activeLink={"/games"}>
         <Games height={logoSize} />
       </MenuLink>
-      <MenuLink activeLink={"/whishlist"}>
-        <Heart height={logoSize} />
-      </MenuLink>
     </nav>
   )
 }

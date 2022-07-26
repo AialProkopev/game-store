@@ -21,11 +21,13 @@ export const Home = () => {
   }, [data, isLoading])
 
   useEffect(() => {
-    let interval: NodeJS.Timer
-    interval = setInterval(() => {
-      setGames((games) => cycleArray(games as GameType[]) as GameType[])
-    }, duration * 1000)
-    return () => clearInterval(interval)
+    if (games) {
+      let interval: NodeJS.Timer
+      interval = setInterval(() => {
+        setGames((games) => cycleArray(games as GameType[]) as GameType[])
+      }, duration * 1000)
+      return () => clearInterval(interval)
+    }
   }, [games])
 
   return (

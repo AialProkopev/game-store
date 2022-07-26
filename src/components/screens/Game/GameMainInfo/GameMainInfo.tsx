@@ -53,8 +53,6 @@ export const GameMainInfo: FC<GameMainInfoProps> = ({
         >
           {added ? "In cart" : "Add to cart"}
         </button>
-
-        <button className={styles.button__fav}>Add to wishlist</button>
       </div>
     </main>
   )
