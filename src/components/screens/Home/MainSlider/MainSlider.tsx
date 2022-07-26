@@ -37,6 +37,7 @@ export const MainSlider = ({
               layout="fill"
               objectFit="cover"
               alt={item.name}
+              quality={60}
               priority
             />
           ) : null}

@@ -17,6 +17,7 @@ export const GameItem: FC<{ game: GameType }> = ({ game }) => {
                 layout="fill"
                 alt={game.name}
                 objectFit="cover"
+                quality={10}
               />
             ) : (
               "no image"

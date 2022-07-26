@@ -84,6 +84,7 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
                     alt="image"
                     layout="fill"
                     objectFit="cover"
+                    quality={60}
                     priority
                   />
                 </div>
@@ -106,6 +107,7 @@ export const Carousel: FC<CarouselPropsType> = ({ id }) => {
                   alt="image"
                   layout="fill"
                   objectFit="cover"
+                  quality={10}
                 />
               </div>
             ))}
