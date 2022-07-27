@@ -10,6 +10,17 @@
     h2 {
         @include text(28px, 600);
     }
+    @media (max-width: 1400px) {
+        padding: 0 64px;
+    }
+    @media (max-width: 880px) {
+        padding: 0 32px;
+    }
+    @media (max-width: 600px) {
+        margin-top: 40px;
+        gap: 32px;
+    }
+
 }
 .games {
     display: flex;
@@ -17,4 +28,11 @@
     justify-content: center;
     max-width: 100%;
     gap: 32px;
+    @media (max-width: 1400px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    @media (max-width: 880px) {
+        gap: 16px;
+    }
 }

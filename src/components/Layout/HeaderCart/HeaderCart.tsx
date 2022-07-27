@@ -8,7 +8,7 @@ export const HeaderCart = () => {
   const cart = useAppSelector((state: RootState) => state.cartReducer.cart)
   return (
     <Link href="/cart">
-      <div className={styles.cart}>Cart ({cart.length})</div>
+      <div className={styles.cart}>Cart&nbsp;({cart.length})</div>
     </Link>
   )
 }

@@ -5,6 +5,10 @@
     min-width: 300px;
     cursor: pointer;
     span {
-            color: $active-font-color;
-        }
+        color: $active-font-color;
+    }
+    @media (max-width: 600px) {
+        font-size: 20px;
+        min-width: 160px;
+    }
 }

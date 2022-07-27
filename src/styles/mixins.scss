@@ -1,5 +1,4 @@
 @import "./color.variables.scss";
-@import './font.variables.scss';
 
 @mixin flexGapDirection($gap:0, $direction:row) {
     display: flex;
@@ -13,7 +12,7 @@
     flex-direction: $dir;
 }
 @mixin text($fontSize: 18px, $fontWeight: 500){
-    font-family: $main-font;
+    font-family: 'Anek Latin', sans-serif;
     font-size: $fontSize;
     font-weight: $fontWeight;
     font-style: normal;

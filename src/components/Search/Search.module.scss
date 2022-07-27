@@ -23,6 +23,18 @@
             border: none;
             color: $main-font-color;
             background: none;
+        }
+        @media (max-width:1024px) {
+            width: 160px;
+        }
+        @media (max-width: 880px) {
+            height: 20px;
+            padding: 0 2px;
+            outline: 1px solid $manatee;
+            border-radius: 0;
+            input {
+                font-size: 18px;
             }
+        }
     }
 }

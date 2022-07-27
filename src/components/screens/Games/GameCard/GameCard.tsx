@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { GameType } from "src/types/Game.type"
 import styles from "./GameCard.module.scss"
 import Image from "next/image"
@@ -16,7 +16,6 @@ export const GameCard = ({ data }: { data: GameType }) => {
             alt={data.name}
             objectFit="cover"
             quality={10}
-            priority
           />
           <div className={styles.blackblur}></div>
         </div>

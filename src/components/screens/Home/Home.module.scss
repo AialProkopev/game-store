@@ -1,11 +1,16 @@
 @import 'src/styles/mixins.scss';
 @import 'src/styles/color.variables.scss';
-@import 'src/styles/font.variables.scss';
 
 .main {
     min-height: 100%;
     max-width: 100%;
     padding: 8px 128px;
+    @media (max-width: 1400px) {
+        padding: 8px 64px;
+    }
+    @media (max-width: 880px) {
+        padding: 8px 32px;
+    }
 }
 
 .footer {

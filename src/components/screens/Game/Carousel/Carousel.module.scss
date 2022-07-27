@@ -4,8 +4,7 @@ $grid-gap : 36px;
 
 .grid {
     grid-area: left-top;
-    width: clamp(900px, 1000px, 1200px);
-    // width: 100%;
+    width: 1000px;
     height: 100%;
     display: grid;
     gap: $grid-gap;
@@ -14,6 +13,15 @@ $grid-gap : 36px;
     "main"
     "belt";
     position: relative;
+    @media (max-width: 1680px) {
+        width: 800px;
+    }
+    @media (max-width: 1400px) {
+        width: 600px;
+    }
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 }
 .belt {
     grid-area: belt;
@@ -22,6 +30,10 @@ $grid-gap : 36px;
     display: flex;
     padding: 0 64px;
     gap: 24px;
+    @media (max-width:600px) {
+        gap: 8px;
+        padding: 0 32px;
+    }
 }
 .imageWrapper {
     position: relative;
@@ -66,4 +78,7 @@ $grid-gap : 36px;
     display: flex;
     justify-content: space-between;
     z-index: 1;
+    @media (max-width:600px) {
+        top: 33%;
+    }
 }

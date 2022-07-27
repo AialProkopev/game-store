@@ -14,8 +14,35 @@
     .left {
         display: flex;
         align-items: center;
-        // width: 100%;
         gap: 64px;
         height: 100%;
+    }
+    .menuBtn {
+        cursor: pointer;
+    }
+    .menu {
+        @include text(18px, 400);
+        position: absolute;
+        z-index: 2;
+        right: 32px;
+        top: 48px;
+        padding: 8px;
+        border: 1px solid $manatee;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background-color: $dark-color;
+    }
+    @media (max-width: 1400px) {
+        padding: 4px 64px;
+    }
+    @media (max-width: 1199px) {
+        gap: 30px;
+    }
+    @media (max-width: 1024px) {
+        gap: 8px;
+    }
+    @media (max-width: 880px) {
+        padding: 4px 32px;
     }
 }

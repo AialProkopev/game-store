@@ -1,6 +1,4 @@
-@import './font.variables.scss';
 @import './color.variables.scss';
-// @import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,13 +9,6 @@ body {
   margin: 0;
   font-family: 'Anek Latin', sans-serif;
 }
-// *,
-// *:after,
-// *:before {
-//   flex: 1 0 auto;
-//   /* safari bugfix */
-//   box-sizing: border-box;
-// }
 a {
   color: inherit;
   text-decoration: none;

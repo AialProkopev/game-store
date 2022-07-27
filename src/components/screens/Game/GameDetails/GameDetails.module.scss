@@ -5,12 +5,16 @@
     grid-area: left-bottom;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 }
 .details {
     display: flex;
     flex-direction: row;
     gap: 64px;
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
 .details__item {
     @include flexGapDirection(4px, column);
@@ -29,6 +33,9 @@
         }
 
     }
+    @media (max-width: 600px) {
+        gap: 8px;
+    }
 }
 .title {
     @include text(32px, 600);
@@ -44,6 +51,11 @@
         width: 90px;
         font-size: 20px;
         color: $second-font-color;
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }   
     }
-    
+    @media (max-width: 600px) {
+        font-size: 16px;
+    }
 }

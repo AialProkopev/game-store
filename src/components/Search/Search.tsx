@@ -4,7 +4,11 @@ import { SearchList } from "./SearchList/SearchList"
 import { Search as SearchLogo } from "@styled-icons/bootstrap/Search"
 import { useRouter } from "next/router"
 
-export const Search: FC = () => {
+interface searchPropsType {
+  burger: boolean
+}
+
+export const Search: FC<searchPropsType> = ({ burger }) => {
   const [value, setValue] = useState<string>("")
   const [isActive, setIsActive] = useState<boolean>(false)
   const router = useRouter()
@@ -29,7 +33,7 @@ export const Search: FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.search}>
-        <SearchLogo height={18} width={18} />
+        {burger ? null : <SearchLogo height={18} width={18} />}
         <input
           type="search"
           onChange={handleChange}

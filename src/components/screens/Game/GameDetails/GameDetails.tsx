@@ -25,19 +25,25 @@ export const GameDetails: FC<GameDetailsProps> = ({
           <div className={styles.details__item}>
             <div>
               <h6>Creators</h6>
-              {developers.map((item, index) => (
-                <span key={`${item.name}_${index}`} className={styles.span}>
-                  {item.name}
-                </span>
-              ))}
+              {developers.map(
+                (item, index) =>
+                  index < 3 && (
+                    <span key={`${item.name}_${index}`} className={styles.span}>
+                      {item.name}
+                    </span>
+                  )
+              )}
             </div>
             <div>
               <h6>Publishers</h6>
-              {publishers.map((item, index) => (
-                <span key={`${item.name}_${index}`} className={styles.span}>
-                  {item.name}
-                </span>
-              ))}
+              {publishers.map(
+                (item, index) =>
+                  index < 3 && (
+                    <span key={`${item.name}_${index}`} className={styles.span}>
+                      {item.name}
+                    </span>
+                  )
+              )}
             </div>
           </div>
           <div className={styles.release}>

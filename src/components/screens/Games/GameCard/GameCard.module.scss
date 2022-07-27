@@ -9,6 +9,9 @@
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
+    @media (max-width: 600px) {
+        height: 100px;
+    }
 }
 .blackblur {
     position: absolute;
@@ -32,4 +35,10 @@
     width: 100%;
     color: $main-font-color;
     padding: 10px;
+    @media (max-width: 600px) {
+        font-size: 14px;
+    }
+    @media (max-width: 480px) {
+        font-size: 10px;
+    }
 }

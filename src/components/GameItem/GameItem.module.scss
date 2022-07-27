@@ -21,6 +21,17 @@
     flex-direction: column;
     gap: 10px;
     transform-style: preserve-3d;
+    @media (max-width: 1400px) {
+        width: 340px;
+    }
+    @media (max-width: 1199px) {
+        width: 42vw;
+        height: 300px;
+    }
+    @media screen and (max-width: 600px) {
+        width: 100vw;
+        height: 180px;
+    }
     &:hover .front{
             transform: perspective(500px) rotateX(180deg);
         }
