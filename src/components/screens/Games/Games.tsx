@@ -47,8 +47,6 @@ export const Games = React.memo(function Games() {
     if (scrollHeight - (scrollTop + innerHeight) < 120) setFetching(true)
   }, [])
 
-  console.log("genre: ", activeGenre)
-
   return (
     <Transition direction="left">
       <main className={styles.main}>
