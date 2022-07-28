@@ -20,10 +20,10 @@
 
 # [x] - finish carousel
 
+# [x] - adaptive
+
 # [] - Image Loading Optimization
 
 # [] - optimization (useCallback, useMemo)
-
-# [] - adaptive
 
 # [] - getStaticProps (Next js)
