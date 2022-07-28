@@ -13,6 +13,14 @@ export const Genres: FC<GenresPropsType> = ({
   return (
     <div className={styles.genres}>
       <button
+        className={activeGenre === "" ? styles.activeGenre : ""}
+        onClick={() => {
+          handleChangeGenre("")
+        }}
+      >
+        All
+      </button>
+      <button
         className={activeGenre === "adventure" ? styles.activeGenre : ""}
         onClick={() => {
           handleChangeGenre("adventure")

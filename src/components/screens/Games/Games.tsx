@@ -7,7 +7,7 @@ import { GameType } from "src/types/Game.type"
 import { Genres } from "./Genres/Genres"
 import Transition from "src/components/Transition/Transition"
 
-export const Games = () => {
+export const Games = React.memo(function Games() {
   const [games, setGames] = useState<GameType[]>([])
   const [currentPage, setCurrentPage] = useState(1)
   const [activeGenre, setActiveGenre] = useState<string>("")
@@ -16,7 +16,7 @@ export const Games = () => {
   const { data, isLoading, error } = useGetGameListQuery({
     page: currentPage,
     pageSize: 20,
-    genre: activeGenre ? activeGenre : "",
+    genre: activeGenre,
   })
 
   useEffect(() => {
@@ -29,13 +29,6 @@ export const Games = () => {
   }, [])
 
   useEffect(() => {
-    if (activeGenre) {
-      setGames([])
-      setCurrentPage(1)
-    }
-  }, [activeGenre])
-
-  useEffect(() => {
     if (fetching) {
       setCurrentPage(currentPage + 1)
       setFetching(false)
@@ -43,6 +36,8 @@ export const Games = () => {
   }, [fetching])
 
   const handleChangeGenre = (genre: string) => {
+    setGames([])
+    setCurrentPage(1)
     setActiveGenre(genre)
   }
 
@@ -52,7 +47,7 @@ export const Games = () => {
     if (scrollHeight - (scrollTop + innerHeight) < 120) setFetching(true)
   }, [])
 
-  console.log(currentPage)
+  console.log("genre: ", activeGenre)
 
   return (
     <Transition direction="left">
@@ -64,10 +59,10 @@ export const Games = () => {
         <div className={styles.grid} id="grid">
           {games &&
             games.map((item: GameType) => (
-              <GameCard key={item.id} data={item} />
+              <GameCard key={`${activeGenre}_${item.id}`} data={item} />
             ))}
         </div>
       </main>
     </Transition>
   )
-}
+})

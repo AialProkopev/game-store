@@ -36,4 +36,16 @@
         }
         
     }
+    @media (max-width: 500px) {
+        flex-direction: column;
+        gap: 36px;
+        .main {
+            .imageWrapper {
+                width: 100%;
+            }
+        }
+        .controls {
+            flex-direction: row;
+        }
+    }
 }
