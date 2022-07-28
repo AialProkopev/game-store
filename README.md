@@ -1,5 +1,7 @@
 # Game store
 
-# Next js, Typescript, Redux, SASS
+# Next js, TypeScript, Redux, SASS
 
 # RAWG API
+
+# https://game-store-flax.vercel.app/
