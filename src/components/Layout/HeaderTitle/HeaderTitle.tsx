@@ -10,31 +10,14 @@ export const HeaderTitle = () => {
   return (
     <Link href="/">
       <div className={styles.title}>
-        {currentRoute === "/" && (
-          <>
-            Game Store / <span>Discovery</span>
-          </>
-        )}
-        {currentRoute === "/games" && (
-          <>
-            Game Store / <span>Games</span>
-          </>
-        )}
-        {currentRoute === "/whishlist" && (
-          <>
-            Game Store / <span>Whishlist</span>
-          </>
-        )}
-        {currentRoute === "/cart" && (
-          <>
-            Game Store / <span>Cart</span>
-          </>
-        )}
-        {currentRoute === "/game/[id]" && (
-          <>
-            Game Store / <span>Overview</span>
-          </>
-        )}
+        Game Store /{" "}
+        <span>
+          {currentRoute === "/" && `Discovery`}
+          {currentRoute === "/games" && `Games`}
+          {currentRoute === "/whishlist" && `Whishlist`}
+          {currentRoute === "/cart" && `Cart`}
+          {currentRoute === "/game/[id]" && `Overview`}
+        </span>
       </div>
     </Link>
   )

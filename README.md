@@ -1,4 +1,4 @@
-# Game store
+# Game Store
 
 # Next js, TypeScript, Redux, SASS
 
