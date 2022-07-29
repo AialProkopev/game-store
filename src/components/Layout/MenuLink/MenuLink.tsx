@@ -13,24 +13,19 @@ export const MenuLink: FC<PropsWithChildren<MenuLinkType>> = ({
 }) => {
   const router = useRouter()
   const currentRoute = router.pathname
+  const linkClassName =
+    currentRoute === activeLink
+      ? `${styles.link} ${styles.link_active}`
+      : styles.link
+  const wrapperClassName =
+    currentRoute === activeLink
+      ? `${styles.wrapper} ${styles.wrapper_active}`
+      : styles.wrapper
+
   return (
-    <div
-      className={
-        currentRoute === activeLink
-          ? `${styles.wrapper} ${styles.wrapper_active}`
-          : styles.wrapper
-      }
-    >
+    <div className={wrapperClassName}>
       <Link href={activeLink}>
-        <a
-          className={
-            currentRoute === activeLink
-              ? `${styles.link} ${styles.link_active}`
-              : styles.link
-          }
-        >
-          {children}
-        </a>
+        <a className={linkClassName}>{children}</a>
       </Link>
     </div>
   )

@@ -29,6 +29,12 @@ export const GameMainInfo: FC<GameMainInfoProps> = ({
       : setAdded(false)
   }, [cart])
 
+  const disableBtn = added ? true : false
+
+  const handleDispatch = () => {
+    dispatch(addToCart(game))
+  }
+
   return (
     <main className={styles.description}>
       <div className={styles.banner}>
@@ -49,7 +55,8 @@ export const GameMainInfo: FC<GameMainInfoProps> = ({
       <div className={styles.button}>
         <button
           className={styles.button__add}
-          onClick={() => dispatch(addToCart(game))}
+          onClick={handleDispatch}
+          disabled={disableBtn}
         >
           {added ? "In cart" : "Add to cart"}
         </button>
