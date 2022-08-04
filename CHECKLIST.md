@@ -25,5 +25,3 @@
 # [] - Image Loading Optimization
 
 # [] - optimization (useCallback, useMemo)
-
-# [] - getStaticProps (Next js)
