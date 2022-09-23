@@ -7,6 +7,7 @@
 - Redux
 - RTK Query
 - SASS
+- Framer Motion
 
 ### Api
 
