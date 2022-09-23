@@ -1,7 +1,17 @@
 # Game Store
 
-# Next js, TypeScript, Redux, SASS
+### Techonologies
 
-# RAWG API
+- Next js
+- TypeScript
+- Redux
+- RTK Query
+- SASS
 
-# https://game-store-flax.vercel.app/
+### Api
+
+RAWG API
+
+### Link
+
+https://game-store-flax.vercel.app/
